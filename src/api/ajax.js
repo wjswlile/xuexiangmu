@@ -7,11 +7,11 @@ import axios from 'axios'
 export default function ajax(url, data={}, method='GET') {
 
   return new Promise((resolve, reject) => {
-    let Promise
+    let promise
     if(method ==='GET'){
 
       let queryStr = ''
-      object.keys(data).forEach(key => {
+      Object.keys(data).forEach(key => {
         const value = data[key]
         queryStr += `${key}=${value}&`
       })
